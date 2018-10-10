@@ -16,7 +16,6 @@
 # クイックソートではピボットと呼ぶ軸となる要素の値より大きい要素群、小さい要素群という具合にソートの対象となる部分を小さくしてゆきながら全体のソートを完了させます。
 
 #
-
 def quick_sort(random_num)
 
   return random_num if random_num.length < 1

@@ -16,24 +16,36 @@
 
 # リストの個数が多くなればなるほど処理速度も遅くなりますが、シンプルなアルゴリズムなのでデータ量が少ないときには手軽に実装できます。
 
+# def bubble_sort(random_num)
+#   index = 0
+#   count = 0
+#    (random_num.length - 1).times do
+#    count += 1
+#     (random_num.length - count).times do
+#       if random_num[index] >= random_num[index + 1]
+#          tmp_num = random_num[index]
+#          random_num[index] = random_num[index + 1]
+#          random_num[index + 1] = tmp_num
+#          tmp_num = nil
+#       end
+#       index += 1
+#     end
+#     index = 0
+#   end
+#   random_num
+# end
+
+
 def bubble_sort(random_num)
-  index = 0
-  count = 0
-  random_num_length = random_num.length
-   (random_num.length - 1).times do
-   count += 1
-    (random_num.length - count).times do
-     # puts index
-      #puts count
-      if random_num[index] >= random_num[index + 1]
-         tmp_num = random_num[index]
-         random_num[index] = random_num[index + 1]
-         random_num[index + 1] = tmp_num
+  for i in 0..(random_num.length - 2) do
+    for j in 0..(random_num.length - 2 - i) do
+      if random_num[j] >= random_num[j + 1]
+         tmp_num = random_num[j]
+         random_num[j] = random_num[j + 1]
+         random_num[j + 1] = tmp_num
          tmp_num = nil
       end
-      index += 1
     end
-    index = 0
   end
   random_num
 end
